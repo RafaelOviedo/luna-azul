@@ -1,9 +1,25 @@
 <template>
   <div class="consoleComponent">
+    <h1 class="title">Luna Azul</h1>
     <div class="contentBox">
       <img class="poster" :src="poster" alt="poster">
+      <div class="textBox">
+        <p class="bookText">
+          Este libro lo escribi cuando estudiaba comunicacion social, tiene casi 10 años, el estilo literario no es el mejor<br>
+          pero hay una historia de ficcion interesante segun los que lo leyeron y me dieron feedback.
+          <br>
+          <br>
+          <b><u>Sinopsis</u></b>
+          <br>
+          <br>
+          Luego de la última guerra, sale a la luz una clandestina ciudad subterránea que le 
+          cambiará la vida a dos humildes sobrevivientes, donde tras una larga dictadura de 
+          más de 40 años es alterada por la avidez de escapar a la filosofía de la voluntad 
+          del ser.
+        </p>
+      </div>
     </div>
-      <a class="button" :href="`${publicPath}LUNAZUL.pdf`" download>DESCARGAR</a>
+      <a class="button" :href="`${publicPath}LUNAZUL.pdf`" download><b>DESCARGAR PDF</b></a>
   </div>
 </template>
 
@@ -25,9 +41,6 @@ export default {
 
 <style scoped>
 .consoleComponent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,85 +49,80 @@ export default {
   background: #00A8FF;
 }
 
-.contentBox {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 70%;
-  height: 80%;
-  border: 1px solid black;
+.title {
+  top: 5%;
+  font-size: 40px;
+  color: #fff;
 }
 
 .poster {
-  width: 30%;
-  height: 80%;
-  position: absolute;
+  /* position: absolute;
+  top: 15%;
+  left: 7%; */
+  width: 25%;
+  height: 30%;
 }
 
-.title {
-  position: absolute;
-  top: 5%;
-  font-size: 50px;
-  color: #fff;
-}
-
-.consoleBox {
+.textBox {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 60%;
-  height: 40%;
-  border: 4px solid #fff;
-  border-radius: 10px;
+  justify-content: center;
+  width: 30%;
+  height: 80%;
 }
 
-.consoleButtons {
-  width: 6%;
-  height: 20%;
-  border: 4px solid #fff;
-  border-radius: 10px;
-  background: transparent;
-  cursor: pointer;
-  outline: none;
+.bookText {
+  text-align: justify;
+  font-size: 20px;
   color: #fff;
 }
 
-.pressed:active {
+.button {
+  font-size: 19px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  height: 7%;
+  color: #00A8FF;
   background: #fff;
+  border-radius: 10px;
 }
 
 @media (max-width: 768px) {
+  .consoleComponent {
+    /* height: 200vh; */
+    overflow: scroll;
+  }
   .title {
     position: absolute;
-    top: 8%;
-    font-size: 40px;
+    top: 2%;
+    left: 31%;
+    font-size: 30px;
     color: #fff;
 }
-
-  .consoleBox {
+  .poster {
     position: absolute;
-    top: 25%;
-    left: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 60%;
-    height: 60%;
-    border: 4px solid #fff;
-    border-radius: 10px;
+    top: 15%;
+    left: 9%;
+    width: 80%;
+    height: 75%;
+    border-radius: 15px;
 }
-
-  .consoleButtons {
-    width: 40%;
-    height: 20%;
-    border: 4px solid #fff;
-    border-radius: 10px;
-    background: transparent;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-}
+  .bookText {
+    position: absolute;
+    top: 97%;
+    left: 9%;
+    width: 80%;
+    font-size: 20px;
+  }
+  .button {
+    position: absolute;
+    top: 170%;
+    left: 16%;
+    width: 65%;
+    height: 7%;
+  }
 }
 </style>
