@@ -27,7 +27,7 @@
 import poster from '../assets/lunazul.jpg';
 
 export default {
-  name: 'HelloWorld',
+  name: 'LunaAzul',
   data() {
     return {
       poster,
@@ -50,25 +50,31 @@ export default {
 }
 
 .title {
+  position: absolute;
   top: 5%;
+  left: 46%;
   font-size: 40px;
   color: #fff;
 }
 
 .poster {
-  /* position: absolute;
-  top: 15%;
-  left: 7%; */
-  width: 25%;
-  height: 30%;
+  position: absolute;
+  top: 18%;
+  left: 22%;
+  width: 22%;
+  height: 70%;
+  border-radius: 15px;
 }
 
 .textBox {
+  position: absolute;
+  top: 15%;
+  left: 58%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30%;
-  height: 80%;
+  width: 25%;
+  height: 60%;
 }
 
 .bookText {
@@ -78,6 +84,9 @@ export default {
 }
 
 .button {
+  position: absolute;
+  top: 75%;
+  left: 63%;
   font-size: 19px;
   text-decoration: none;
   display: flex;
@@ -92,7 +101,6 @@ export default {
 
 @media (max-width: 768px) {
   .consoleComponent {
-    /* height: 200vh; */
     overflow: scroll;
   }
   .title {
@@ -110,16 +118,25 @@ export default {
     height: 75%;
     border-radius: 15px;
 }
-  .bookText {
+  .textBox {
+    display: flex;
+    align-items: center;
     position: absolute;
-    top: 97%;
-    left: 9%;
-    width: 80%;
+    top: 95%;
+    left: 0%;
+    width: 99%;
+    height: 70%;
+  }
+  .bookText {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 90%;
     font-size: 20px;
   }
   .button {
     position: absolute;
-    top: 170%;
+    top: 167%;
     left: 16%;
     width: 65%;
     height: 7%;
